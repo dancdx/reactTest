@@ -6,6 +6,7 @@ import { immutableRenderDecorator } from 'react-immutable-render-mixin';
 import CSSModules from 'react-css-modules';
 import { Motion, spring } from 'react-motion';
 import InkBar from './InkBar'
+import styles from './App.css'
 
 function getOuterWidth(el) {
   return el.offsetWidth;

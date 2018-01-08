@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin';
 import CSSModules from 'react-css-modules';
 import classnames from 'classnames';
+import styles from './App.css'
 
 @immutableRenderDecorator
 @CSSModules(styles, { allowMultiple: true })
