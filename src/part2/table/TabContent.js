@@ -37,7 +37,7 @@ class TabContent extends Component{
     });
 
     return (
-      <div className={classes}>
+      <div styleName={classes}>
         {this.getTabPanes()}
       </div>
     );

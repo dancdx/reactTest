@@ -164,6 +164,9 @@ module.exports = {
                 loader: require.resolve('css-loader'),
                 options: {
                   importLoaders: 1,
+                  modules:true,
+                  localIdentName: '[path][name]_[local]_[hash:base64:5]',
+                  sourceMap:true
                 },
               },
               {
@@ -184,6 +187,7 @@ module.exports = {
                       flexbox: 'no-2009',
                     }),
                   ],
+                  sourceMap:true
                 },
               },
             ],

@@ -1,8 +1,8 @@
-html, body {
+:global html, :global body {
   margin: 0;
   padding: 0; }
 
-ul {
+:global ul {
   margin: 0;
   padding: 0; }
 
@@ -10,18 +10,19 @@ ul {
   font-size: 14px;
   margin-bottom: 16px; }
 
-.tabs-bar {
+.bar {
+  position: relative;
   margin-bottom: 16px; }
 
-.tabs-nav {
+.nav {
   font-size: 14px; }
-  .tabs-nav:after, .tabs-nav:before {
+  .nav:after, .nav:before {
     display: table;
     content: " "; }
-  .tabs-nav:after {
+  .nav:after {
     clear: both; }
 
-.tabs-nav > .tabs-tab {
+.tab {
   float: left;
   list-style: none;
   margin-right: 24px;
@@ -30,13 +31,25 @@ ul {
   color: #666;
   cursor: pointer; }
 
-.tabs-nav > .tabs-active {
-  border-bottom: 2px solid #00C49F;
+.tabActive {
   color: #00C49F;
   cursor: default; }
 
-.tabs-content .tabs-panel {
+.panel {
   display: none; }
 
-.tabs-content .tabs-active {
+.content {
   display: block; }
+
+.contentActive {
+  display: block; }
+
+.inkBar {
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  box-sizing: border-box;
+  height: 2px;
+  background-color: #00C49F;
+  z-index: 1; }
+.tabs-bar{}

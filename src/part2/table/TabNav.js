@@ -107,11 +107,11 @@ class TabNav extends Component{
     });
 
     return (
-      <div className={rootClasses} role="tablist">
+      <div styleName={rootClasses} role="tablist">
         <Motion style={{ left: spring(this.state.inkBarLeft) }}>
           {({ left }) => <InkBar width={this.state.inkBarWidth} left={left} />}
         </Motion>
-        <ul className={classes}>
+        <ul styleName={classes}>
           {this.getTabs()}
         </ul>
       </div>

@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import Tabs from './Tabs'
 import TabPane from './TabPane'
-import './App.css'
+import CSSModules from 'react-css-modules';
+import styles from './App.css'
 
+@CSSModules(styles, { allowMultiple: true })
 class App extends Component {
   constructor (props) {
     super(props)
@@ -27,7 +29,7 @@ class App extends Component {
 
     return (
       <div>
-        <div className='operator'>
+        <div styleName='operator'>
           <span>切换 Tab：</span>
           <select value={this.state.activeIndex} onChange={this.handleChange}>
             <option value='0'>Tab 1</option>
@@ -35,7 +37,7 @@ class App extends Component {
             <option value='2'>Tab 3</option>
           </select>
         </div>
-        <Tabs defaultActiveIndex={this.state.activeIndex} className='tabs-bar' onChange={this.changeSelect}>
+        <Tabs defaultActiveIndex={this.state.activeIndex} styleName='tabs-bar' onChange={this.changeSelect}>
           <TabPane order='0' tab={'Tab 1'}>第一个 Tab 里的内容</TabPane>
           <TabPane order='1' tab={'Tab 2'}>第二个 Tab 里的内容</TabPane>
           <TabPane order='2' tab={'Tab 3'}>第三个 Tab 里的内容</TabPane>

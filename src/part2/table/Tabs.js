@@ -6,7 +6,6 @@ import TabNav from './TabNav'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin';
 import CSSModules from 'react-css-modules';
 import styles from './App.css';
-// import './App.css'
 import { Seq } from 'immutable';
 
 @immutableRenderDecorator

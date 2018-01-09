@@ -29,7 +29,7 @@ class TabPane extends Component{
     return (
       <div
         role="tabpanel"
-        className={classes}
+        styleName={classes}
         aria-hidden={!isActive}>
         {children}
       </div>
