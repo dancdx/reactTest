@@ -42,11 +42,15 @@ class TabNav extends Component{
     const { activeIndex } = this.props;
     const node = ReactDOM.findDOMNode(this);
     const el = node.querySelectorAll('li')[activeIndex];
+    const _this=this
+    setTimeout(function() {
+        _this.setState({
+        inkBarWidth: getOuterWidth(el),
+        inkBarLeft: getOffset(el).left,
+      });
+    }, 0);
 
-    this.setState({
-      inkBarWidth: getOuterWidth(el),
-      inkBarLeft: getOffset(el).left,
-    });
+    
   }
   componentDidUpdate(prevProps) {
     if (prevProps.activeIndex !== this.props.activeIndex) {
@@ -62,9 +66,9 @@ class TabNav extends Component{
   }
   getTabs() {
     const { panels, activeIndex } = this.props;
-    const rst = [];
+    // const rst = [];
     return panels.map( (child) => {
-      if (!child) { return; }
+      if (!child) { return null; }
       const order = parseInt(child.props.order, 10);
       let classes = classnames({
         tab: true,

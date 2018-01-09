@@ -19,7 +19,7 @@ class TabPane extends Component{
   };
 
   render() {
-    const { classPrefix, className, isActive, children } = this.props;
+    const {  isActive, children } = this.props;
 
     const classes = classnames({
       panel: true,

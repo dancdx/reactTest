@@ -17,7 +17,7 @@ class TabContent extends Component{
     const { activeIndex, panels } = this.props;
 
     return panels.map( (child) => {
-      if (!child) { return; }
+      if (!child) { return null; }
 
       const order = parseInt(child.props.order, 10);
       const isActive = activeIndex === order;
