@@ -4,7 +4,7 @@ class Start extends Component{
   render(){
     return(
       <div>
-        <CommentList promise={()=>fetch('./part4/response.json')}/>
+        <CommentList promise={()=>fetch('/response.json')}/>
       </div>
     )
   }
