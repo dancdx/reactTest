@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import App from './part2/table/App'
+import CommentList from './part4/CommentList'
 class Start extends Component{
   render(){
     return(
       <div>
-        <App/>
+        <CommentList promise={()=>fetch('./part4/response.json')}/>
       </div>
     )
   }
